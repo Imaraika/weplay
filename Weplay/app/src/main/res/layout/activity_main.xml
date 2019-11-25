@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout-header"
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:background="@drawable/gradient"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="28dp">
+
+
+        <EditText
+            android:id="@+id/locationEditText"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="108dp"
+            android:textColor="@color/colorWhite" />
+
+        <RelativeLayout
+            android:id="@+id/relative_spinner"
+            android:layout_width="193dp"
+            android:layout_height="43dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="2dp"
+            android:background="@color/colorWhite">
+
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/searchbtn"
+            android:layout_width="169dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/relative_spinner"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/rounded_button"
+            android:text="Search" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_marginTop="258dp">
+
+        <TextView
+            android:id="@+id/playgroundTextView"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/gradient"
+            android:padding="6dp"
+            android:text="Playground"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/textViewMsg"
+            android:layout_width="93dp"
+            android:layout_height="31dp"
+            android:layout_below="@+id/playgroundTextView"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="2dp"
+            android:text="Shooting Stars club"
+            android:textColor="@color/colorBlack"
+            android:textSize="24px" />
+
+        <ViewFlipper
+            android:id="@+id/v_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+    </RelativeLayout>
+
+
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:layout_below="@+id/banner"-->
+<!--        android:layout_marginTop="1dp"-->
+<!--        android:fillViewport="true">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:orientation="horizontal">-->
+
+
+<!--            <GridView-->
+<!--                android:id="@+id/gv_test"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:layout_marginTop="0dp"-->
+
+<!--                android:columnWidth="90dp"-->
+<!--                android:gravity="center"-->
+<!--                android:horizontalSpacing="5dp"-->
+<!--                android:numColumns="auto_fit" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </HorizontalScrollView>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_below="@id/banner"
+        android:layout_marginTop="60dp"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clipToPadding="false"
+            android:foregroundGravity="center"
+            android:overScrollMode="never"></androidx.viewpager.widget.ViewPager>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
