@@ -57,7 +57,9 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/ic_email_white_24dp" />
+                        android:src="@drawable/ic_email_white_24dp"
+                        android:onClick="browser1"
+                        tools:ignore="OnClick" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -70,7 +72,9 @@
                             android:layout_height="wrap_content"
                             android:text="Email"
                             android:textColor="@color/colorWhite"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:onClick="browser1"
+                            tools:ignore="OnClick"/>
 
                         <TextView
                             android:id="@+id/EmailTextView"
@@ -79,13 +83,10 @@
                             android:fontFamily="sans-serif-light"
                             android:text="user@weplay.com"
                             android:textColor="#000000"
-                            android:textSize="18sp" />
+                            android:textSize="18sp"
+                            />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="15dp"
-                            android:background="@color/colorBluefonce" />
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -105,7 +106,9 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/ic_call_white_24dp" />
+                        android:src="@drawable/ic_call_white_24dp"
+                        android:onClick="browser2"
+                        tools:ignore="OnClick"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -118,7 +121,9 @@
                             android:layout_height="wrap_content"
                             android:text="Telephone"
                             android:textColor="@color/colorWhite"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:onClick="browser2"
+                            tools:ignore="OnClick"/>
 
                         <TextView
                             android:id="@+id/PhoneTextView"
@@ -153,7 +158,9 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginLeft="20dp"
-                        android:src="@drawable/ic_near_me_black_24dp" />
+                        android:src="@drawable/ic_near_me_black_24dp"
+                        android:onClick="browser3"
+                        tools:ignore="OnClick"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -166,7 +173,9 @@
                             android:layout_height="wrap_content"
                             android:text="Twitter"
                             android:textColor="@color/colorWhite"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:onClick="browser3"
+                            tools:ignore="OnClick"/>
 
                         <TextView
                             android:id="@+id/twitter"

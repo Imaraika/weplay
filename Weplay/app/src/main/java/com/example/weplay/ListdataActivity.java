@@ -1,6 +1,7 @@
 package com.example.weplay;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -43,22 +44,24 @@ public class ListdataActivity extends AppCompatActivity {
         //enable back Button
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    //getting back to listview
+    public void browser1(View view){
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                "mailto", "abc@gmail.com", null));
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "This is my subject text");
+        this.startActivity(Intent.createChooser(emailIntent, null));
+    }
 
+    public void browser2(View view){
+        String PhoneNum = "+250 787971925";
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:"+Uri.encode(PhoneNum.trim())));
+        callIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(callIntent);
+    }
 
+    public void browser3(View view){
+        Intent browser4Intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Omoyi"));
+        startActivity(browser4Intent);
+    }
 }
 
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getItemId() == android.R.id.home) {
-//            onBackPressed();
-//        }
-//        return super.onOptionsItemSelected(item);
-//
-//    }
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//    }
-//}

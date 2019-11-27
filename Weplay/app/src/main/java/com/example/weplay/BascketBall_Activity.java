@@ -17,8 +17,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class BascketBall_Activity extends AppCompatActivity {
-    int[] IMAGES = {R.drawable.bascketbal, R.drawable.basck, R.drawable.bako, R.drawable.basckbal2,
-            R.drawable.elitbako,R.drawable.abakobwabako, R.drawable.gisozibasck, R.drawable.bascketbal, R.drawable.volleyball, R.drawable.volleball};
+    int[] IMAGES = {R.drawable.abakobwabako, R.drawable.basck, R.drawable.bako, R.drawable.basckbal2,
+            R.drawable.elitbako,R.drawable.abakobwabako, R.drawable.gisozibasck, R.drawable.bako, R.drawable.volleyball, R.drawable.volleball};
 
     String[] hsesRoad = {"707 Kicukiro Ave", "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 lene KK","707 Kicukiro Ave",
             "2206 gisz ruhango GD","2816 Beletoire Ave", "8227 Folcroft kigali", "9227 nyamirambo NY",};
@@ -26,9 +26,6 @@ public class BascketBall_Activity extends AppCompatActivity {
 
 
     @BindView(R.id.listView) ListView listOfbasketballplayground;
-    @BindView(R.id.display_Location_TextView) TextView dispLocationText;
-//    @BindView(R.id.imageViewoflist) ImageView img;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +35,7 @@ public class BascketBall_Activity extends AppCompatActivity {
 
 
 //        img = (ImageView) findViewById(R.id.imageViewoflist) ;
-        dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
+//        dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
         listOfbasketballplayground = (ListView) findViewById(R.id.listView);
 
         BascketBall_Activity.CustomerAdapter customerAdapter = new BascketBall_Activity.CustomerAdapter();
@@ -61,7 +58,7 @@ public class BascketBall_Activity extends AppCompatActivity {
         });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        dispLocationText.setText("Playground available at " + location);
+//        dispLocationText.setText("Playground available at " + location);
 
     }
 

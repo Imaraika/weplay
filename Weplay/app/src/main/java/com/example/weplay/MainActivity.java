@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ViewFlipper;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    EditText locationEdit;
+    TextView locationEdit;
     TextView dispLocationText;
     String SpinnerValue;
     String[] SPINNERVALUES = {"BASKETBALL","VOLLEYBALL","FOOTBALL","YOGA","RUGBY","GIMY","TENNIS","CHILD"};
@@ -41,10 +41,14 @@ public class MainActivity extends AppCompatActivity {
         int image [] ={R.drawable.bascketbal,R.drawable.allgamesandroid,R.drawable.bascketbal,R.drawable.allgames};
 
         models = new ArrayList<>();
-        models.add(new model(R.drawable.bascketbal,"bascketball"));
-        models.add(new model(R.drawable.allballs,"allballs"));
-        models.add(new model(R.drawable.allgames,"allgames"));
+        models.add(new model(R.drawable.abakobwabako,"bascketball"));
+        models.add(new model(R.drawable.yoga3,"allballs"));
+        models.add(new model(R.drawable.yogachild,"allgames"));
         models.add(new model(R.drawable.football,"football"));
+        models.add(new model(R.drawable.abakobwabako,"bascketball"));
+        models.add(new model(R.drawable.bako,"allballs"));
+        models.add(new model(R.drawable.vv,"allgames"));
+        models.add(new model(R.drawable.kigalichild,"football"));
 
         adapter = new Adapter(models,this);
         viewPager = findViewById(R.id.pager);
@@ -60,6 +64,61 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
 
+                if (position == 0){
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                else if (position == 1){
+                    Intent intentinnt = new Intent(MainActivity.this,Yoga_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                else if (position == 2){
+                    Intent intentinnt = new Intent(MainActivity.this,Yoga_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                else if (position == 3){
+                    Intent intentinnt = new Intent(MainActivity.this,Football_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                else if (position == 4){
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                else if (position == 5){
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 6){
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+                if (position == 7){
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+
+
+                else{
+                    Intent intentinnt = new Intent(MainActivity.this,BascketBall_Activity.class);
+                    startActivity(intentinnt);
+                    Toast.makeText(MainActivity.this, "one item has been clicked", Toast.LENGTH_SHORT).show();
+                }
+
+
+
+
+
+
+
+
             }
 
             @Override
@@ -68,8 +127,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        viewPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intenting = new Intent(MainActivity.this,BascketBall_Activity.class);
+                startActivity(intenting);
+            }
+        });
 
-        locationEdit = (EditText) findViewById(R.id.locationEditText);
+        locationEdit = (TextView) findViewById(R.id.locationEditText);
 //        dispLocationText = (TextView) findViewById(R.id.textView1_dispLocationText);
         spinner = (Spinner) findViewById(R.id.spinner2);
         GOTO = (Button) findViewById(R.id.searchbtn);
@@ -79,13 +145,8 @@ public class MainActivity extends AppCompatActivity {
             flipperImages(images);
         }
 
-        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.select_sports, android.R.layout.simple_spinner_item,SPINNERVALUES);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, SPINNERVALUES);
-
-// Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         //Adding setOnItemSelectedListener method on spinner.
@@ -154,27 +215,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-//        GridView gv;
-//        GridviewBaseAdapter adapter2;
-//
-//        gv = (GridView) findViewById(R.id.gv_test);
-//        ArrayList<GridViewBean> arr_bean = new ArrayList<GridViewBean>();
-//        arr_bean.add(new GridViewBean(R.drawable.backorg));
-//        arr_bean.add(new GridViewBean(R.drawable.backorg));
-//        arr_bean.add(new GridViewBean(R.drawable.backorg));
-//        arr_bean.add(new GridViewBean(R.drawable.backorg));
-//        arr_bean.add(new GridViewBean(R.drawable.allgamesandroid));
-//        arr_bean.add(new GridViewBean(R.drawable.allballs));
-//        adapter2 = new GridviewBaseAdapter(arr_bean, this);
-//        gv.setAdapter(adapter2);
-//
-//
-//        Intent intent = getIntent();
-//        String location = intent.getStringExtra("location");
-//        locationEdit.setText(location);
-
+        Intent intent = getIntent();
+        String location = intent.getStringExtra("location");
+        locationEdit.setText(location);
 
     }
     public void flipperImages(int images){
@@ -182,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
         imageView.setBackgroundResource(images);
 
         vFlipper.addView(imageView);
-        vFlipper.setFlipInterval(2000);//2sec
+        vFlipper.setFlipInterval(1000);//2sec
         vFlipper.setAutoStart(true);
 
         //animation

@@ -25,7 +25,7 @@ public class Yoga_Activity extends AppCompatActivity {
 
 
     @BindView(R.id.listView) ListView listOfbasketballplayground;
-    @BindView(R.id.display_Location_TextView) TextView dispLocationText;
+//    @BindView(R.id.display_Location_TextView) TextView dispLocationText;
 //    @BindView(R.id.imageViewoflist) ImageView img;
 
 
@@ -36,7 +36,7 @@ public class Yoga_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_yoga_);
 
 //        img = (ImageView) findViewById(R.id.imageViewoflist) ;
-        dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
+//        dispLocationText = (TextView) findViewById(R.id.display_Location_TextView);
         listOfbasketballplayground = (ListView) findViewById(R.id.listView);
 
         Yoga_Activity.CustomerAdapter customerAdapter = new Yoga_Activity.CustomerAdapter();
@@ -59,7 +59,7 @@ public class Yoga_Activity extends AppCompatActivity {
         });
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        dispLocationText.setText("Houses available at " + location);
+//        dispLocationText.setText("Houses available at " + location);
 
     }
 

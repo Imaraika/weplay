@@ -20,7 +20,11 @@
         <activity android:name=".Gimy_Activity" />
         <activity android:name=".Rugby_Activity" />
         <activity android:name=".Child_Activity" />
-        <activity android:name=".Yoga_Activity" />
+        <activity android:name=".Yoga_Activity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.weplay.MainActivity" />
+        </activity>
         <activity android:name=".Football_Activity" />
         <activity android:name=".VolleyBall_Activity" />
         <activity
